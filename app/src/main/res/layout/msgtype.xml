@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation='vertical'
+    android:background="@color/body_background" >
+	
+    <!-- Header -->
+    <include layout="@layout/header"/>
+    
+    <!-- Main content area. -->
+	<!-- android:divider="@drawable/dashed_line"
+        android:dividerHeight="1dip" -->
+    <ListView
+        android:id="@+id/msgtype_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />"
+      
+    <!-- 提示栏 : 已废弃 -->
+    <TextView
+        android:id="@+id/progress_text"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        style="@style/statusbar"
+        android:visibility="gone" /> 
+     
+</LinearLayout>
+

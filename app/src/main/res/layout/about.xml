@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/about_bg" >
+	
+	<!-- Header -->
+    <include layout="@layout/header" />
+
+	<RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+	    
+		
+	    <TextView android:id="@+id/fanfoudroid_logo"
+	        android:src="@drawable/fanfoudroid_logo"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerHorizontal="true"
+	        android:layout_alignParentTop="true"
+			android:text="@string/about_name"
+			style="@style/LinkText.Bold.PrettyHuge"
+	        android:layout_marginTop="25dp" />
+	         
+	    <TextView android:id="@+id/version"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/fanfoudroid_logo"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginBottom="15dp"
+	        android:layout_marginTop="25dp"
+	        android:text="version info"
+		    style="@style/normalText" />
+	    </RelativeLayout>
+
+		<ScrollView 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+		<LinearLayout android:orientation="vertical"
+		     android:layout_width="fill_parent"
+		     android:layout_height="fill_parent"
+		     android:gravity="center_horizontal"
+		     android:paddingTop="5dp"
+		     android:paddingLeft="15dp"
+		     android:paddingRight="15dp"
+		     android:paddingBottom="5dp" >
+		    <!-- 简介 -->
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/about_introduce_title"
+			    style="@style/normalText.Big" />
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/about_introduce"
+			    style="@style/normalText"
+			/>
+			<!-- 联系方式 -->
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/about_contact_title"
+			    style="@style/normalText.Big"
+			/>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="@string/about_contact"
+			    style="@style/normalText"
+			/>		
+		</LinearLayout>
+		</ScrollView>
+
+</LinearLayout>
+
+

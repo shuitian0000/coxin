@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@color/body_background" >
+  
+    <!-- Header -->
+    <include layout="@layout/header"/>
+	
+	<RelativeLayout
+        android:id="@+id/comment_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0">
+        
+	    <!-- 文字内容 -->
+        <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/say_something"
+            android:id="@+id/status_new_content"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="true"
+            android:scrollbarStyle="outsideOverlay"
+            android:gravity="left|top"
+            android:minLines="2"
+            
+            android:background="@null"
+            android:paddingLeft="5sp"
+            android:paddingTop="10sp"
+            android:paddingBottom="40sp"
+            android:textSize="14sp" />
+        
+        <LinearLayout
+            android:id="@+id/view_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/status_new_content"
+            android:layout_weight="3"
+            android:background="@drawable/bg_expire_item"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/txt_location"
+                style="@style/LinkText.Bold.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="6dp"
+                android:layout_weight="14"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="获取位置" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:id="@+id/write_info_expire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_location"
+            android:layout_weight="3"
+            android:background="@drawable/bg_expire_item"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:visibility="gone"
+            >
+            <TextView
+                android:id="@+id/txt_expire_time"
+                style="@style/LinkText.Bold.Big"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="6dp"
+                android:layout_weight="14"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="有效时间: 2 天" />
+        </LinearLayout>
+        
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/write_info_expire">
+        <!-- 图片内容 -->
+         <GridView
+                 android:id="@+id/addPic"
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_margin="6dp"
+                 android:horizontalSpacing="12dp"
+                 android:numColumns="4"
+                 android:verticalSpacing="12dp" /> 
+        </RelativeLayout>
+         <!-- 底部横排按钮 -->
+        <RelativeLayout
+            android:id="@+id/ll_bottom_menu"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_write_weibo_bottom"
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:src="@drawable/camera_light"
+                android:id="@+id/menu_camera"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"/>"
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:src="@drawable/pic_light"
+                android:id="@+id/menu_add_pic"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/menu_camera"/>
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:src="@drawable/emoticon_light"
+                android:id="@+id/menu_emoji"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/menu_add_pic"/>
+             <ImageButton
+                android:layout_width="wrap_content"
+                android:src="@drawable/more_light"
+                android:id="@+id/menu_more_add"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/menu_emoji"/>
+            <!-- 
+            <Space
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_weight="1"/>  -->
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/statusnewactivity_send_light"
+                android:text="@string/comment_send"
+                android:id="@+id/comment_menu_send"
+                android:layout_gravity="right"
+                android:layout_alignParentRight="true"/>"
+        </RelativeLayout>
+    </RelativeLayout>
+
+        <include layout="@layout/comment_emojirelativelayout"/>
+       
+        <GridView
+            android:id="@+id/moreAdd_gridView"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/cover_default_bg"
+            android:numColumns="4"
+            android:paddingLeft="10dp"
+            android:visibility="gone" >
+        </GridView>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true" android:drawable="@color/color_semi_transparent" />
+    <item android:state_pressed="true" android:drawable="@color/color_semi_blue" />
+    <item android:state_selected="true" android:drawable="@color/color_semi_blue" />
+    <item android:drawable="@color/color_transparent">
+        <shap><solid android:color="#ff7f"/>
+            <padding
+                android:left="10dp" android:right="10dp"/>
+            </shap>
+    </item>
+</selector>

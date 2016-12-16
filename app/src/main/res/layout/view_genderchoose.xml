@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
+
+    <RadioGroup
+        android:id="@+id/mychoose_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/mychoose_radioButton1"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/carduo_choosebtn_left_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:layout_marginRight="20dp"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/mychoose_radioButton2"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/carduo_choosebtn_right_bg"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/black" />
+        <!-- 
+           
+            android:textColor="@drawable/carduo_choosebtn_text_color" 
+            android:textColor="@drawable/carduo_choosebtn_text_color"
+         -->
+    </RadioGroup>
+
+</FrameLayout>

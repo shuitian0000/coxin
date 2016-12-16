@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/bg_listitem" >
+    
+    <LinearLayout 
+            android:orientation="vertical"
+            android:id = "@+id/poi_info_item"
+            android:layout_marginLeft="@dimen/info_item_left_margin"
+            android:layout_marginRight="@dimen/info_item_left_margin"
+            android:layout_marginTop="@dimen/info_item_left_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+            
+            <TextView android:id="@+id/poi_info_txt"
+            android:layout_width="wrap_content" 
+            android:layout_height="18dp"
+            android:layout_gravity="left"
+            android:singleLine="true" 
+            android:layout_marginRight="6dp" />
+    </LinearLayout>
+</LinearLayout>

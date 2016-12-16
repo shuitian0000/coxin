@@ -1,0 +1,83 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+        
+   <LinearLayout android:id="@+id/tab_layout"
+	    android:orientation="horizontal" 
+	    android:background="#F5F5F5"
+	    android:layout_width="match_parent" 
+	    android:layout_height="wrap_content" 
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp" 
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/message_tab_round"
+            >
+        <TextView
+            android:id="@+id/liaotian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/liaotian"
+            android:textColor="@color/color_tab_green"
+            android:textSize="15sp" />
+        </LinearLayout>
+        <!-- 
+        <LinearLayout
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/message_tab_round"
+            >
+        <TextView
+            android:id="@+id/faxian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/faxian"
+            android:textColor="@color/color_black"
+            android:textSize="15sp" />
+        </LinearLayout>  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="vertical"
+        	android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/message_tab_round"
+            >
+        <TextView
+            android:id="@+id/tongxunlu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/tongxunlu"
+            android:textColor="@color/color_black"
+            android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+</LinearLayout>

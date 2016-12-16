@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_pop_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:background="@drawable/title_bar"
+    android:gravity="center_vertical" >
+
+	   <ImageButton
+            android:id="@+id/back_btn"
+            android:layout_width="70dp"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="14sp"
+            android:src="@drawable/navbar_back_icon"
+            android:background="@drawable/navbar_btn_style" 
+	    android:visibility="gone" />	
+      	<TextView
+		    android:id="@+id/title_bar_text"
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content" 
+        	android:text=""
+        	android:layout_centerInParent="true"
+        	android:textSize="20sp"		
+			android:textColor="#ffffff" /> 
+			
+        <RadioGroup 
+        	android:gravity="center_vertical" 
+        	android:layout_gravity="bottom" 
+        	android:orientation="horizontal" 
+        	android:id="@+id/main_radio" 
+        	android:background="@drawable/bottom_bar" 
+        	android:layout_width="wrap_content" 
+        	android:layout_height="wrap_content"
+        	>"
+
+            <RadioButton 
+            	android:id="@+id/comment_btn_reply" 
+            	android:tag="comment_btn_reply" 
+            	android:layout_marginTop="2.0dip" 
+            	android:layout_marginLeft="5.0dp"
+            	android:layout_marginRight="5.0dp"
+            	android:text="@string/comment_reply" 
+            	android:drawableTop="@drawable/ic_nav_2" 
+            	style="@style/main_tab_bottom" />
+            <RadioButton 
+            	android:id="@+id/comment_btn_report" 
+            	android:tag="comment_btn_report" 
+            	android:layout_marginTop="2.0dip" 
+            	android:layout_marginLeft="5.0dp"
+            	android:layout_marginRight="5.0dp"
+            	android:text="@string/comment_report" 
+            	android:drawableTop="@drawable/ic_nav_3" 
+            	style="@style/main_tab_bottom" />
+            <RadioButton 
+            	android:id="@+id/comment_btn_enjoy" 
+            	android:tag="comment_btn_enjoy" 
+            	android:layout_marginTop="2.0dip" 
+            	android:layout_marginLeft="5.0dp"
+            	android:layout_marginRight="5.0dp"
+            	android:text="@string/comment_enjoy" 
+            	android:drawableTop="@drawable/ic_nav_5" 
+            	style="@style/main_tab_bottom" /> 
+				
+            <!-- only for owner -->
+            <RadioButton 
+            	android:id="@+id/comment_btn_owner_contact" 
+            	android:tag="comment_btn_owner_contact" 
+            	android:layout_marginTop="2.0dip" 
+            	android:layout_marginLeft="5.0dp"
+            	android:layout_marginRight="5.0dp"
+            	android:text="@string/comment_contact" 
+            	android:drawableTop="@drawable/ic_nav_4" 
+            	style="@style/main_tab_bottom" />
+            <RadioButton 
+            	android:id="@+id/comment_btn_owner_ok" 
+            	android:tag="comment_btn_owner_ok"
+            	android:layout_marginTop="2.0dip" 
+            	android:layout_marginLeft="5.0dp"
+            	android:layout_marginRight="5.0dp"
+            	android:text="@string/comment_ok" 
+            	android:drawableTop="@drawable/ic_nav_5" 
+            	style="@style/main_tab_bottom" />  
+				
+        </RadioGroup>
+
+</RelativeLayout>
+    
+      

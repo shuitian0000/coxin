@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000"
+    android:id="@+id/viewpager_contextview"
+    android:gravity="center" >
+    <ImageView 
+        android:id="@+id/popup_ref"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:visibility="gone"
+        android:src="@drawable/base_list_divider_drawable"/>"
+    
+<com.codeim.floorview.view.AlbumViewPagerLayoutView
+    android:id="@+id/image_viewpager"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f6f5f5"
+    android:visibility="gone" >
+    <com.codeim.floorview.view.AlbumViewPager
+        android:id="@+id/image_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.codeim.floorview.view.AlbumViewPager>
+    <LinearLayout
+        android:id="@+id/image_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="6dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+</com.codeim.floorview.view.AlbumViewPagerLayoutView>
+
+</RelativeLayout>

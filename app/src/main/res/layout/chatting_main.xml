@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation='vertical'
+    android:background="@color/body_background" >
+    
+    <!-- Header -->
+    <include layout="@layout/header"/>
+
+    <!-- 
+<ListView
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout 
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/container_bg"
+        android:orientation="vertical"></LinearLayout>
+</ListView>
+ -->
+ 
+  <RelativeLayout
+        android:id="@+id/Linear1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#666"
+        android:paddingTop="8dp" >
+     <!-- 
+     <com.codeim.youliao.widget.PullToRefreshListView 
+     <com.codeim.floorview.view.PullToRefreshListView  -->
+     <com.codeim.youliao.widget.PullToRefreshListView
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="2dp"
+        android:background="@color/container_bg" />
+     
+      <RelativeLayout
+        android:id="@+id/comment_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#f0ffffff"
+        android:padding="7dp">
+
+        <ImageView  
+            android:id="@+id/ivPopUp"  
+            android:layout_width="wrap_content"  
+            android:layout_height="wrap_content"  
+            android:layout_alignParentLeft="true"  
+            android:layout_centerVertical="true"  
+            android:layout_marginLeft="10dip"  
+            android:src="@drawable/chatting_setmode_msg_btn" /> 
+        <EditText
+            android:id="@+id/edt_sendmessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivPopUp"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:hint="文字回复"
+            android:cursorVisible="true"
+            android:textColor="#777775"
+            android:textColorHint="#777775"
+            android:textSize="14sp"/>
+            <TextView  
+            android:id="@+id/btn_rcd"  
+            android:layout_width="fill_parent"  
+            android:layout_height="40dp"   
+            android:layout_centerVertical="true"  
+            android:layout_marginLeft="10dp"  
+            android:layout_marginRight="10dp"  
+            android:layout_toRightOf="@+id/ivPopUp"
+            android:layout_toLeftOf="@+id/btn_send"
+            android:background="@drawable/chat_send_btn"
+            android:gravity="center"  
+            android:text="按住说话"  
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/more_light"
+            android:singleLine="true"
+            android:text="发送"
+            android:textColor="#777775"
+            android:textSize="14sp"/>
+       </RelativeLayout>
+       
+     </RelativeLayout>
+     
+  
+          <include layout="@layout/comment_emojirelativelayout"/>
+       
+        <GridView
+            android:id="@+id/moreAdd_gridView"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/cover_default_bg"
+            android:numColumns="4"
+            android:paddingLeft="10dp"
+            android:visibility="gone" >
+        </GridView>
+
+</LinearLayout>

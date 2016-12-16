@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/login_bg" >
+  
+    <!-- Header -->
+    <include layout="@layout/header" />
+
+    <!-- 登录框 -->
+    <LinearLayout
+        android:id="@+id/register_div"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	    android:layout_marginTop="30dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+	    android:background="@drawable/login_input"
+	    android:orientation="vertical" >    
+	      
+	    <!-- 用户名 input -->
+	    <EditText
+	        android:id="@+id/username_edit"
+	        android:layout_width="fill_parent"
+	        android:layout_height="36dp"
+	        android:background="#00ffffff"
+		    android:hint="用户名"
+	        android:singleLine="true"
+	        android:inputType="text" />
+	    
+		<View  
+            android:layout_width="fill_parent"  
+            android:layout_height="1dp"  
+            android:layout_marginLeft="1dp"  
+            android:layout_marginRight="1dp"  
+            android:background="@drawable/divider_horizontal_line" /> 
+		
+	    <!-- 密码 input -->
+	    <EditText
+	        android:id="@+id/password_edit"
+	        android:layout_width="fill_parent"
+	        android:layout_height="36dp"
+		    android:background="#00ffffff"
+	        android:password="true"
+	        android:singleLine="true"
+		    android:hint="密码"
+	        android:inputType="textPassword" />
+		
+		<View  
+            android:layout_width="fill_parent"  
+            android:layout_height="1dp"  
+            android:layout_marginLeft="1dp"  
+            android:layout_marginRight="1dp"  
+            android:background="@drawable/divider_horizontal_line" />
+	
+	    <!-- 确认密码 input -->
+	    <EditText
+	        android:id="@+id/confirm_password_edit"
+	        android:layout_width="fill_parent"
+	        android:layout_height="36dp"
+		    android:background="#00ffffff"
+	        android:password="true"
+	        android:singleLine="true"
+		    android:hint="确认密码"
+	        android:inputType="textPassword" />       
+	</LinearLayout>
+	
+	
+	<!-- 性别 button -->
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+	    android:layout_marginTop="10dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:gravity="center"
+	    android:orientation="horizontal" > 
+	
+	    <com.codeim.coxin.ui.module.GenderChoose
+            android:id="@+id/genderChoose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+        </com.codeim.coxin.ui.module.GenderChoose>
+	
+	</LinearLayout>
+	
+	<!-- 注册 button -->
+	<Button
+	    android:id="@+id/register_button"
+	    android:layout_width="fill_parent"
+	    android:layout_height="36dp"
+	    android:layout_marginLeft="22dp"
+        android:layout_marginRight="22dp"
+        android:layout_marginTop="10dp"        
+	    android:text="@string/login_label_register"
+	    style="@style/blue_button" />
+		
+	<TextView 
+	    android:id="@+id/location_display" 
+		android:layout_width="fill_parent" 
+		android:layout_height="25dp"
+		android:layout_marginLeft="22dp"
+		android:layout_marginRight="22dp"
+		android:layout_marginTop="10dp"
+		android:visibility="gone" />
+	
+</LinearLayout>
+

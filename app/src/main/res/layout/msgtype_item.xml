@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_listitem" >
+    
+    <!-- msgtype,time&status info -->
+    <LinearLayout 
+            android:orientation="horizontal"
+            android:layout_marginTop="2dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        <!-- profile image -->
+        <FrameLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="4dp" >
+                <ImageView android:id="@+id/profile_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" 
+                        android:contentDescription="@string/user_avatar" />
+                <!-- image corner -->
+                <!--
+                <ImageView 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/avatar_border" 
+                        android:background="@drawable/bg_userheader_cover" />  -->
+        </FrameLayout>
+        <LinearLayout 
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >"
+                    <!-- msgtype title -->
+                        <TextView android:id="@+id/type_name"
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:singleLine="true" 
+                            style="@style/normalText.Big"
+                            android:layout_marginBottom="6dp" />      
+                    <!-- msgtype status -->
+                        <TextView android:id="@+id/type_status"
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:singleLine="true" 
+                            style="@style/normalText" />
+        </LinearLayout>
+        
+    </LinearLayout>
+
+</LinearLayout>

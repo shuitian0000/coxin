@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  
+  	<RelativeLayout
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="#7f00"
+	android:layout_gravity="top">
+	
+	    <!-- 
+	    <ImageView android:text="home" android:id="@+id/btnHome"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/icon_1_n"
+		android:layout_alignParentLeft="true"></ImageView>
+		 -->
+		
+		<TextView android:id="@+id/cust_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:text=""
+		android:textColor="@android:color/white"
+		android:layout_centerHorizontal="true"></TextView>
+		
+		<!-- 
+		<ImageView android:text="module 1" android:id="@+id/btnModule"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/icon_5_n"
+		android:layout_centerHorizontal="true"></ImageView>
+		 -->
+		
+		<!-- 
+		<ImageView android:text="more" android:id="@+id/btnMore"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/icon_5_n"
+		android:layout_alignParentRight="true"></ImageView>
+		 -->
+	</RelativeLayout>
+
+    <!-- 
+	<ScrollView android:id="@+id/container"
+		android:text="module 2"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:measureAllChildren="true"
+		android:layout_weight="1"></ScrollView>	 -->
+    <LinearLayout android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+    </LinearLayout>
+
+	<LinearLayout 
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="#7f00"
+	android:layout_gravity="bottom">
+	
+		<LinearLayout android:orientation="vertical" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="4.0">
+	    <EditText android:id="@+id/dishCommentEdit"
+		    android:layout_height="wrap_content" android:layout_width="fill_parent"></EditText>
+		</LinearLayout>
+		
+		<LinearLayout android:orientation="vertical" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1.0">
+	    <Button android:id="@+id/commentSubmit" android:layout_width="fill_parent"
+		    android:layout_height="wrap_content" android:text="提交评论" 
+            android:layout_weight="1"></Button>
+		</LinearLayout>
+		
+	</LinearLayout>
+
+</LinearLayout>

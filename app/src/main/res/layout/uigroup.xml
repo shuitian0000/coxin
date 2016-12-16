@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  
+  	<RelativeLayout 
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="#7f00"
+	android:layout_gravity="top">
+	    <ImageView android:text="home" android:id="@+id/btnHome"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/icon_1_n"
+		android:layout_alignParentLeft="true"></ImageView>
+	 
+	
+		<TextView android:id="@+id/cust_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:text=""
+		android:textColor="@android:color/white"
+		android:layout_centerHorizontal="true"></TextView>
+		
+		<!-- 
+		<ImageView android:text="module 1" android:id="@+id/btnModule"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/icon_5_n"
+		android:layout_centerHorizontal="true"></ImageView>
+		 -->
+		
+		<ImageView android:text="more" android:id="@+id/btnMore"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/icon_5_n"
+		android:layout_alignParentRight="true"></ImageView>
+	</RelativeLayout>
+
+    <!-- 
+	<ScrollView android:id="@+id/container"
+		android:text="module 2"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:measureAllChildren="true"
+		android:layout_weight="1"></ScrollView>	 -->
+    <LinearLayout android:id="@+id/container"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical">
+    </LinearLayout>
+  
+
+	
+	<LinearLayout 
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="#7f00"
+	android:layout_gravity="bottom">
+		<LinearLayout android:orientation="vertical" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1.0">
+			<ImageView android:text="module 3" android:id="@+id/btnModule1"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/icon_1_n"
+			android:layout_marginTop="3dp"
+			android:layout_marginBottom="3dp"
+			android:layout_gravity="center_horizontal"></ImageView>
+			<TextView android:text="排序" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"></TextView>
+		</LinearLayout>
+		<LinearLayout android:orientation="vertical" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1.0">
+			<ImageView android:text="module 3" android:id="@+id/btnModule2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/icon_2_n"
+			android:layout_marginLeft="7dp" android:layout_marginTop="3dp"
+			android:layout_marginBottom="3dp"
+			android:layout_gravity="center_horizontal"></ImageView>
+			<TextView android:text="最近查看" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:layout_marginLeft="7dp"></TextView>
+		</LinearLayout>
+		<!-- 
+		<LinearLayout android:orientation="vertical" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1.0">
+			<ImageView android:text="module 4" android:id="@+id/btnModule3"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/icon_3_n"
+			android:layout_gravity="center_horizontal" android:layout_marginTop="3dp"
+			android:layout_marginBottom="3dp"
+			android:layout_weight="1.0"></ImageView>
+			<TextView android:text="账户" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:layout_marginLeft="7dp"></TextView>
+		</LinearLayout>
+		-->
+		<LinearLayout android:orientation="vertical" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1.0">
+			<ImageView android:text="module 5" android:id="@+id/btnModule4"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/icon_4_n"
+			android:layout_gravity="center_horizontal" android:layout_marginTop="3dp"
+			android:layout_marginBottom="3dp"
+			android:layout_weight="1.0"></ImageView>
+			<TextView android:text="搜索" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:layout_marginLeft="7dp"></TextView>
+		</LinearLayout>
+		<LinearLayout android:orientation="vertical" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_weight="1.0">
+			<ImageView android:text="module 6" android:id="@+id/btnModule5"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:src="@drawable/icon_5_n"
+			android:layout_gravity="center_horizontal" android:layout_marginTop="3dp"
+			android:layout_marginBottom="3dp"
+			android:layout_weight="1.0"></ImageView>
+			<TextView android:text="更多" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:layout_marginLeft="7dp"></TextView>
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>

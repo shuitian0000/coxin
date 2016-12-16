@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000"
+    android:gravity="center" >
+
+    <com.codeim.floorview.view.MatrixImageView
+        android:id="@+id/image_full"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@color/color_white" />
+    <!-- 
+    android:background=android:src="@drawable/bg_userheader_cover"  -->
+    
+    <ToggleButton
+        android:id="@+id/image_checker"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/comment_pic_choosebt_selector"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textOff="@null"
+        android:textOn="@null"
+        />
+
+</RelativeLayout>

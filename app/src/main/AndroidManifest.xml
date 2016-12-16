@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.codeim.coxin"
+      android:versionCode="1"
+      android:versionName="1.0">
+    <application android:icon="@drawable/icon" android:label="@string/app_name"
+        android:allowBackup="false"
+        android:name="com.codeim.coxin.TwitterApplication">
+        <!-- 
+        <activity android:name=".Splash"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         -->
+        <activity android:name="com.codeim.coxin.NewActivity"
+            android:exported="true"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!--<activity android:name="com.codeim.youliao.NewActivity" />  -->
+        <activity android:name="com.codeim.coxin.LoginActivity" />
+        <activity android:name="com.codeim.coxin.SettingsActivity" />
+        <activity android:name="com.codeim.coxin.RegisterActivity" />
+        <activity android:name="com.codeim.coxin.UploadAvatarActivity" />
+        <activity android:name="com.codeim.coxin.AboutActivity" />
+        <activity android:name="com.codeim.coxin.MsgTypeActivity" />
+
+        <activity android:name="com.codeim.coxin.NearbyActivity" />
+        <activity android:name="com.codeim.coxin.ProfileActivity" />
+        <activity android:name="com.codeim.coxin.Time2Activity" />
+        <activity android:name="com.codeim.coxin.BaseWriteActivity" />
+        <activity android:name="com.codeim.coxin.WriteInfoActivity" />
+        <activity android:name="com.codeim.coxin.PoiSearchActivity" 
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.codeim.coxin.InfoMapActivity" />
+        <activity android:name="com.codeim.byme.ListByMyActivity" />
+        <activity android:name="com.codeim.weixin.MessageActivity" />
+        <activity android:name="com.codeim.weixin.FriendViewActivity" />
+        
+        <activity android:name="com.codeim.floorview.CommentActivity" />
+        <activity android:name="com.codeim.floorview.CommentPinnedSectionActivity" />
+        <activity android:name="com.codeim.floorview.CommentWriteActivity" /> 
+        <activity android:name="com.codeim.floorview.AlbumActivity" /> 
+        <activity android:name="com.codeim.floorview.MatrixImageActivity" />
+        
+        <service android:name="com.baidu.location.f" android:enabled="true"
+			android:process=":remote">
+		</service>
+		<service android:name="com.codeim.coxin.service.InitFriendService">
+        </service>
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Op0WXOwH6uL9IDrSGsX0knHz" />
+    </application>
+    
+    <uses-sdk android:minSdkVersion="11" 
+        android:targetSdkVersion="17"/>
+    <supports-screens android:anyDensity="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+
+    <!--
+             添加屏幕支持
+      android:anyDensity="true"
+            这个属性指明应用程序是否包含了能够适用于任何屏幕密度的资源。
+            对于支持Android1.6（API Level 4）和更高版本的应用程序，这个属性的默认值是true，
+            并且除非绝对的确认这是应用程序正常工作所必须的，否则不应该把它设置为false。
+            只是在应用程序直接操作位图时才需要禁止这个属性。
+       
+      android:largeScreens="true"
+              这个属性用于指示应用程序是否支持较大外形的屏幕。
+              一个large类型的屏幕被定义成一个比normal类型的手持设备的屏幕明显还要大的屏幕，
+              并且为了让应用程序能够良好的使用，使用这个属性时要特别小心，尽管可以依赖系统来调整尺寸，
+              以便能够填充屏幕。
+              这个属性的默认值实际上在某些版本之间是不同的，因此最好在任何时候都明确的声明这个属性。
+              如果设置为false，系统会启用屏幕兼容模式，这时要格外的小心。
+       
+      android:normalScreens="true"
+              这个属性用于指示应用程序是否支持普通外形的屏幕。
+              典型的是HVGA中等密度的屏幕，但是WQVGA低密度和WVGA高密度屏幕也被认为是普通屏幕。
+              这个属性的默认值是true。
+       
+      android:smallScreens="true"
+              这个属性用于指定应用程序是否支持较小外形的屏幕。
+              一个small类型的屏幕被定义成一个比normal（传统的HVGA）类型的屏幕还要小的屏幕。
+              外部服务（如Google Play）不会把不支持小屏的应用程序提供给小屏设备，
+              因为很少有能够确保该应用程序在小屏幕的设备上正常工作的平台。这个属性的默认值是true。
+       
+      android:resizeable="true"
+              这个属性用于指示针对不同的屏幕尺寸，应用程序是否可以调整尺寸。默认值是true。
+    -->
+    
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
+</manifest> 

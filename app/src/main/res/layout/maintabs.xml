@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+  	android:layout_width="fill_parent"
+  	android:layout_height="fill_parent"
+  	xmlns:android="http://schemas.android.com/apk/res/android">
+  	<!--  	
+  	<TextView android:id="@+id/top"
+        android:background="#7f00"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="这里top标签"/>
+    -->
+    
+  	<RelativeLayout 
+	android:orientation="horizontal" android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:background="#7f00"
+	android:layout_gravity="top">
+	    <ImageView android:text="home" android:id="@+id/btnHome"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/icon_1_n"
+		android:layout_alignParentLeft="true"></ImageView>
+		
+		<TextView android:id="@+id/cust_title"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:text="标题"
+		android:textColor="@android:color/white"
+		android:layout_centerHorizontal="true"></TextView>
+		
+		<ImageView android:text="more" android:id="@+id/btnMore"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:src="@drawable/icon_5_n"
+		android:layout_alignParentRight="true"></ImageView>
+	</RelativeLayout>
+	
+	<TabHost android:id="@android:id/tabhost"
+  		android:layout_width="fill_parent"
+  		android:layout_height="fill_parent">
+
+  		<FrameLayout android:id="@android:id/tabcontent"
+  			android:layout_width="fill_parent"
+  			android:layout_height="fill_parent"
+  			android:layout_weight="1.0">
+  		</FrameLayout>
+  		
+  		<TabWidget android:id="@android:id/tabs"
+  			android:layout_width="fill_parent"
+  			android:layout_height="wrap_content"
+  			android:visibility="gone">
+  		</TabWidget>
+  			
+  		<RadioGroup android:orientation="horizontal" 
+  			android:gravity="center_vertical|center_horizontal"
+  			android:layout_gravity="bottom" android:id="@+id/main_radio"
+  			android:layout_width="fill_parent" android:layout_height="wrap_content"
+  			android:background="@drawable/maintab_toolbar_bg">
+			<RadioButton android:text="排序" android:checked="true"
+				android:id="@+id/radio_button0" android:layout_marginTop="2.0dip"
+				android:drawableTop="@drawable/icon_1_n"
+				style="@style/main_tab_bottom">
+			</RadioButton>
+			<RadioButton android:text="最近查看"
+				android:id="@+id/radio_button1" android:layout_marginTop="2.0dip"
+				android:drawableTop="@drawable/icon_3_n"
+				style="@style/main_tab_bottom">
+			</RadioButton>
+			<RadioButton android:text="更多"
+				android:id="@+id/radio_button2" android:layout_marginTop="2.0dip"
+				android:drawableTop="@drawable/icon_5_n"
+				style="@style/main_tab_bottom">
+			</RadioButton>
+  		</RadioGroup>
+ 	</TabHost>
+</LinearLayout>

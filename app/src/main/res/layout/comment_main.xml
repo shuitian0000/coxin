@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation='vertical'
+    android:background="@color/body_background" >
+    
+    <!-- Header -->
+    <include layout="@layout/header"/>
+
+    <!-- 
+<ListView
+    android:id="@+id/ScrollView1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout 
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/container_bg"
+        android:orientation="vertical"></LinearLayout>
+</ListView>
+ -->
+ 
+  <RelativeLayout
+        android:id="@+id/Linear1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#666"
+        android:paddingTop="8dp" >
+     <!-- 
+     <com.codeim.youliao.widget.PullToRefreshListView 
+     <com.codeim.floorview.view.PullToRefreshListView  -->
+     <com.codeim.floorview.view.PullRefreshAndLoadMoreListView
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:dividerHeight="2dp"
+        android:background="@color/container_bg" />
+     
+      <LinearLayout
+        android:id="@+id/comment_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#f0ffffff"
+        android:padding="7dp">
+
+        <EditText
+            android:id="@+id/edt_simple_comment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="文字简易回复"
+            android:cursorVisible="true"
+            android:textColor="#777775"
+            android:textColorHint="#777775"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btn_send_simple_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_transparent"
+            android:singleLine="true"
+            android:text="发布"
+            android:textColor="#777775"
+            android:textSize="14sp"/>
+       </LinearLayout>
+       
+     </RelativeLayout>
+
+</LinearLayout>

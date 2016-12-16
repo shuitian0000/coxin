@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/bg_listitem" >
+    
+    <!-- user info,time&status info -->
+    <!-- info header -->
+    <LinearLayout 
+            android:orientation="horizontal"
+            android:id = "@+id/info_item_header"
+            android:layout_marginLeft="@dimen/info_item_left_margin"
+            android:layout_marginRight="@dimen/info_item_left_margin"
+            android:layout_marginTop="@dimen/info_item_left_margin"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+        <!-- profile image -->
+        <FrameLayout 
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginRight="9dp" >
+                <ImageView android:id="@+id/profile_image"
+                        android:layout_width="fill_parent" 
+                        android:layout_height="fill_parent" 
+                        android:contentDescription="@string/user_avatar" />
+                <!-- image corner -->
+                <ImageView 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="fill_parent"
+                        android:contentDescription="@string/avatar_border" 
+                        android:background="@drawable/bg_userheader_cover" />
+        </FrameLayout>
+        <LinearLayout 
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+                <FrameLayout android:id="@+id/first_line"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top" >
+                        
+                    <!-- user name -->
+                        <TextView android:id="@+id/screen_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:singleLine="true"
+                            style="@style/LinkText.Bold.Big" />
+
+                    <!-- user gender age distance and tweet createdAt -->
+                        <TextView android:id="@+id/tweet_meta_text"
+                            android:layout_width="wrap_content" 
+                            android:layout_height="18dp"
+                            android:layout_gravity="right"
+                            android:singleLine="true" 
+                            android:layout_marginRight="6dp" 
+                            android:visibility="gone" />
+                    <!-- user gender age distance and tweet createdAt -->
+                        <ImageView android:id="@+id/down_arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:background="@drawable/bg_downarrow"
+                            android:layout_marginRight="6dp" />        
+                </FrameLayout>
+                <FrameLayout android:id="@+id/second_line"
+                    android:orientation="horizontal"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="4dp" >
+                        
+                    <!-- user name -->
+                        <TextView android:id="@+id/public_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="18dp"
+                            android:singleLine="true"
+                            style="@style/normalText" />
+
+                    <!-- user gender age distance and tweet createdAt -->
+                        <TextView android:id="@+id/info_status"
+                            android:layout_width="wrap_content" 
+                            android:layout_height="18dp"
+                            android:layout_gravity="right"
+                            android:singleLine="true" 
+                            android:layout_marginRight="6dp" />           
+                </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- info body -->
+    <LinearLayout 
+        android:orientation="vertical"
+        android:layout_margin="@dimen/info_item_left_margin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+            <!-- Tweet context -->
+            <com.codeim.coxin.ui.module.MyTextView
+                    android:id="@+id/tweet_text" 
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginBottom="@dimen/info_item_left_margin"
+                    android:textColor="@drawable/tweet_color"
+                    android:singleLine="true"
+                    android:textSize="28sp"
+                    android:lineSpacingExtra="2sp" />
+            
+             <!-- 图片内容 -->
+             <GridView
+                android:id="@+id/infoPicShow"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:horizontalSpacing="12dp"
+                android:numColumns="4"
+                android:focusable="false"
+                android:verticalSpacing="12dp" 
+                android:visibility="gone"/> 
+                        
+            <LinearLayout 
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone" >"
+                        
+                <FrameLayout
+                    android:layout_width="160dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+                            
+                    <!-- 播放按钮 -->
+                    <FrameLayout
+                        android:id="@+id/play_btn_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:clickable="true"
+                        android:visibility="visible" >
+                        
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_vertical"
+                            android:progressDrawable="@drawable/item_progressbar_play" />
+                                 
+                        <ImageView
+                            android:id="@+id/play_image"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:contentDescription="@string/play"
+                            android:src="@drawable/item_player_play" />
+                    </FrameLayout>
+                    
+                    <!-- 正在下载 -->
+                    <FrameLayout
+                        android:id="@+id/downloading_btn_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"     
+                        android:clickable="true"                
+                        android:visibility="gone" >
+                                    
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_vertical"
+                            android:progressDrawable="@drawable/item_progressbar_play" />
+                                    
+                        <ProgressBar
+                            android:id="@+id/download_progressbar"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_horizontal|center_vertical" />
+                    </FrameLayout>
+                        
+                    <!-- 停止按钮与语音进度条 -->
+                    <FrameLayout
+                        android:id="@+id/stop_btn_layout"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:clickable="true"
+                        android:visibility="gone" >
+                    
+                        <ProgressBar
+                            android:id="@+id/play_progressbar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_gravity="center_vertical"
+                            android:progressDrawable="@drawable/item_progressbar_play" />
+                                                
+                        <ImageView
+                            android:id="@+id/stop_image"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:contentDescription="@string/stop"
+                            android:src="@drawable/item_player_stop" />
+                    </FrameLayout>
+                            
+                    <TextView 
+                        android:id="@+id/play_total_time_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|bottom"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:text="@string/initialization_time"
+                        android:textSize="12sp" 
+                        android:textColor="#000" />
+                
+                </FrameLayout>
+                
+                <TextView 
+                    android:id="@+id/comment_count_text" 
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="16dp"
+                        android:textSize="16sp"
+                        android:text="0" />
+                
+            </LinearLayout>
+                        
+    </LinearLayout>
+    
+    <!-- divider -->
+    <ImageView
+        android:id = "@+id/info_item_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/body_background_1" />
+    
+    <!-- info footer -->
+    <LinearLayout
+        android:id = "@+id/info_item_footer"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/info_item_left_padding"
+        android:paddingRight="@dimen/info_item_left_padding"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >"
+        
+        <LinearLayout android:id="@+id/info_item_footer_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_weight="3"
+            android:background="@drawable/bg_listitem">
+        <TextView android:id="@+id/txt_status"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:singleLine="true"
+            style="@style/LinkText.Bold.Big"
+            android:text="@string/info_expire"
+            android:layout_marginRight="6dp" />
+        <TextView android:id="@+id/txt_expire_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            style="@style/LinkText.Bold.Big"
+            android:singleLine="true"
+            android:layout_marginRight="6dp" />
+         </LinearLayout>
+        
+         <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:focusable="false"
+            android:background="@color/body_background_1" />
+        
+        <LinearLayout android:id="@+id/info_item_footer_reply"
+             android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:background="@drawable/bg_listitem">
+        <ImageView android:id="@+id/btn_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:focusable="false"
+            android:src="@drawable/ic_nav_3_normal" />
+        <TextView android:id="@+id/cnt_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true" 
+            android:text="@string/comment_reply"
+            android:layout_marginRight="6dp" />
+        </LinearLayout>
+        
+        <ImageView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:focusable="false"
+            android:background="@color/body_background_1" />
+        
+        <LinearLayout android:id="@+id/info_item_footer_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_weight="2"
+            android:background="@drawable/bg_listitem">
+        <ImageView android:id="@+id/btn_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:focusable="false"
+            android:background="@drawable/fav_un_dark" />
+        <TextView android:id="@+id/cnt_praise"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="0"
+            android:singleLine="true" 
+            android:layout_marginRight="6dp" />
+        </LinearLayout>
+        
+        
+    </LinearLayout>
+
+    <!-- list item divider -->
+    <!-- 
+    <ImageView android:id="@+id/list_divide"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/base_list_divider_drawable"
+        /> list item divider -->
+        
+    <!-- 
+    <ImageView 
+        android:id="@+id/info_divider"
+        android:layout_width="fill_parent"
+        android:layout_height="4dp"
+        android:paddingLeft="16.0dip"
+        android:paddingRight="16.0dip"
+        android:scaleType="fitXY"
+        android:src="@drawable/base_list_divider_drawable"/>  -->
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#000"
+    android:gravity="center" >
+
+    <ImageView
+        android:id="@+id/image_full"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:src="@color/color_white" />
+    <!-- 
+    android:background=android:src="@drawable/bg_userheader_cover"  -->
+    
+    <Button
+        android:id="@+id/button_del_image"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/delete"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top|right"/>
+
+</RelativeLayout>

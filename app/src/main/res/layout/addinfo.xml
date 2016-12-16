@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  android:background="@color/body_background" >
+  
+    <!-- Header -->
+    <include layout="@layout/header"/>
+
+	<EditText android:id="@+id/addInfoContext"
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent"
+		android:textColor="@color/color_black"
+		android:cursorVisible="true"
+		android:hint="输入你想说的"
+		/>
+
+	<EditText android:id="@+id/addInfoPlace"
+		android:layout_height="wrap_content" 
+		android:layout_width="fill_parent"
+		android:textColor="@color/color_black"
+		android:hint="如果需要，输入详细地点"
+		/>
+	
+	<Button 
+		android:id="@+id/submitInfo"
+		android:layout_width="67dp" 
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginRight="5dp"
+        android:text="提交"
+        android:textColor="#ff7f"
+        android:textSize="15dp"
+        android:background="@drawable/submit_btn_center" 
+		/>
+
+
+</LinearLayout>

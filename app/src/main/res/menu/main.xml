@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="settings"/>
+    <!-- 
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/navigation_refresh"
+        android:orderInCategory="101"
+        android:showAsAction="ifRoom|withText"
+        android:title="refresh"/>
+    <item
+        android:id="@+id/action_about"
+        android:icon="@drawable/action_about"
+        android:orderInCategory="101"
+        android:showAsAction="ifRoom"
+        android:title="about"/>  -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:orderInCategory="103"
+        android:showAsAction="always"/>
+    <item
+        android:id="@+id/action_edit"
+        android:icon="@drawable/navbar_add_icon"
+        android:orderInCategory="105"
+        android:showAsAction="always"
+        android:title="edit"/>
+    <!-- 
+    <item
+        android:id="@+id/action_help"
+        android:showAsAction="always"
+        android:title="help"/>
+    <item
+        android:id="@+id/action_email"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:orderInCategory="106"
+        android:showAsAction="ifRoom"
+        android:title="email"/>
+         -->
+         
+     <!-- for comment -->
+     <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+</menu>

@@ -2,17 +2,29 @@ apply plugin: 'com.android.application'
 
 android {
     signingConfigs {
+        //config {
+        //    keyAlias 'coxin'
+        //    keyPassword '8999439'
+        //    storeFile file('C:/Users/ywwang/.android/release.jks')
+        //    storePassword '8999439'
+        //}
+        //config1 {
+        //    keyAlias 'androiddebugkey'
+        //    keyPassword 'android'
+        //    storeFile file('C:/Users/ywwang/.android/debug.keystore')
+        //    storePassword 'android'
+        //}
+        //config {
+        //    keyAlias 'release'
+        //    keyPassword '8999439'
+        //    storeFile file('/Users/ywwang/AndroidStudioProjects/Coxin/release.jks')
+        //    storePassword '8999439'
+        //}
         config {
-            keyAlias 'coxin'
+            keyAlias 'release'
             keyPassword '8999439'
-            storeFile file('C:/Users/ywwang/.android/release.jks')
+            storeFile file('../release.jks')
             storePassword '8999439'
-        }
-        config1 {
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-            storeFile file('C:/Users/ywwang/.android/debug.keystore')
-            storePassword 'android'
         }
     }
     useLibrary 'org.apache.http.legacy'
